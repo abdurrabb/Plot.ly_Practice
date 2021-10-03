@@ -1,5 +1,3 @@
-// let init_id = 940
-
 buildCharts();
 
 function buildCharts(selected_id) {
@@ -12,7 +10,6 @@ function buildCharts(selected_id) {
             dropdown.append("option").text(id)
         })
     
-        // let selected_id = 940;
         // SELECT DATA
         let subjectData = selectData(selected_id, data);
         let metadata = subjectData.metadata;
@@ -31,7 +28,6 @@ function buildCharts(selected_id) {
 function optionChanged(id) {
     console.log(id);
     buildCharts(id)
-    // let selected_id = d3.select("#selDataset").text();
 }
 
 function selectData(id, data) {
@@ -46,7 +42,6 @@ function selectData(id, data) {
 function meta_init(metadata) {
     meta_div = d3.select("#sample-metadata");
     meta_div.html("")
-    // meta_div.append("p").text("Does this work?")
     Object.entries(metadata).forEach(([key, value]) => {
         meta_div.append("p").html(`<strong>${key.toUpperCase()}:</strong> ${value}`)
     })
