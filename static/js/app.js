@@ -28,6 +28,8 @@ function buildCharts(selected_id) {
 function optionChanged(id) {
     console.log(id);
     buildCharts(id)
+    // let selected_id = d3.select("#selDataset").text();
+
 }
 
 function selectData(id, data){
