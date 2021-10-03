@@ -2,7 +2,7 @@
 
 buildCharts(940);
 
-function buildCharts(selected_id) {
+function buildCharts(_selected_id) {
     d3.json("samples.json").then(data => {
         console.log(data);
         let ids = data.names;
